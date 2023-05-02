@@ -1,0 +1,10 @@
+n=int(input())
+l=list(map(int,input().split())) 
+print("max:",max(l))
+print("min:",min(l))
+
+Output:
+5
+1 5 7 9 15
+max: 15
+min: 1
