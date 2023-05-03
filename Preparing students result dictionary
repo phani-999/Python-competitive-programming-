@@ -1,0 +1,30 @@
+try:
+    d={}
+    n=int(input())
+    for i in range(0,n):
+        name,result=input().split()
+        d[name]=result
+    for i in range(0,n):
+        name=input()
+        if name in d:
+            print(name,d[name],'the exam')
+        else:
+            print('No Result Found')
+except:
+    print('Invalid input')
+
+
+Output:
+4
+ramu pass
+rani fail
+devi pass
+uma fail
+ramu
+ramu pass the exam
+sita
+No Result Found
+devi
+devi pass the exam
+uma
+uma fail the exam
