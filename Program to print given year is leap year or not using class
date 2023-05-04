@@ -1,0 +1,16 @@
+class solution:
+    def leapyear(self, n):
+        if n%4==0 and n%100!=0 or n%400==0:
+            return True
+        else:
+            return False
+n=int(input())
+s=solution()
+if s.leapyear(n):
+    print("leap year")
+else:
+    print("Not a leap year")
+
+Output:
+1904
+leap year
