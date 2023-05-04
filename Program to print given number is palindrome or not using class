@@ -1,0 +1,25 @@
+class solution:
+    def pal(self, n):
+        pd=n
+        r=0
+        while(n>0):
+            r=r*10+n%10
+            n//=10
+        if r==pd:
+            return True
+        else:
+            return False
+n=int(input())
+s=solution()
+if s.pal(n):
+    print("palindrome")
+else:
+    print("Not a palindrome")
+
+Output:
+14414
+Not a palindrome
+
+Output:
+1441
+palindrome
