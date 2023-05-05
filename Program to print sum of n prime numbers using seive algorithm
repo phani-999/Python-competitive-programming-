@@ -1,0 +1,23 @@
+import math
+seive=[]
+n=int(input())
+n1=n*n+1
+for i in range(0,n1):
+    seive.append(1)
+x=int(math.sqrt(n1))
+for i in range(2,x+1):
+    if seive[i]==1:
+        for j in range(i*i,n1,i):
+            seive[j]=0
+s=0
+k=0
+for i in range(2,n1):
+    if seive[i]==1:
+        k=k+1
+        if k<=n:
+            s=s+i
+print(s,end=' ')
+
+Output:
+10
+129
