@@ -1,0 +1,13 @@
+class Solution:
+    def subarraySum(self, nums, k) :
+        c=0
+        d={}
+        for i in accumulate(nums):
+            if i%k==0:
+                c=c+1
+            if j%k not in d:
+                d[j%k]=1
+            else:
+                c=c+dic[j%k]
+                d[j%k]+=1
+        return c
