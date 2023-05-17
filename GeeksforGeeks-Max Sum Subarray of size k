@@ -1,0 +1,17 @@
+class Solution:
+    def maximumSumSubarray (self,k,Arr,N):
+        winsum=sum(Arr[:k])
+        maxsum=winsum
+        for i in range(N-k):
+            winsum=winsum-Arr[i]+Arr[i+k]
+            maxsum=max(maxsum,winsum)
+        return maxsum
+        
+Input:
+N = 4, K = 2
+Arr = [100, 200, 300, 400]
+Output:
+700
+Explanation:
+Arr3  + Arr4 =700,
+which is maximum.
