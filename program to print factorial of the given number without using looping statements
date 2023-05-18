@@ -1,0 +1,12 @@
+def sumofn(n):
+    if n==0:
+        return 1
+    else:
+        return n*sumofn(n-1)
+n=int(input())
+print(sumofn(n))
+
+input:
+5
+output:
+120
