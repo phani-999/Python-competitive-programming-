@@ -1,0 +1,17 @@
+l=list(map(int,input().split()))
+k=int(input())
+n=len(l)
+ct=0
+for i in range(0,n):
+    sum=0
+    for j in range(i,n):
+        sum+=l[j]
+        if sum>k:
+            ct+=1
+print(ct)
+
+input:
+1 11 2 3 15
+10
+output:
+11
