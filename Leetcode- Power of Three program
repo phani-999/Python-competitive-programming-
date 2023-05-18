@@ -1,0 +1,19 @@
+class Solution:
+    def isPowerOfThree(self, n: int) -> bool:
+        if n==1:
+            return True
+        elif n%3>=1:
+            return False
+        else:
+            return n>1 and self.isPowerOfThree(n//3)
+
+Example 1:
+
+Input: n = 27
+Output: true
+Explanation: 27 = 3^3
+
+Example 2:
+Input: n = 0
+Output: false
+Explanation: There is no x where 3^x = 0.
