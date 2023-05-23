@@ -1,0 +1,24 @@
+from itertools import permutations
+class Solution:
+    def find_permutation(self, S):
+        p=permutations(S)
+        m=[]
+        for i in list(p):
+            x=list(i)
+            s=''
+            for j in x:
+                s+=j
+            m.append(s)
+        l=[]
+        for i in m:
+            if i not in l:
+                l.append(i)
+        return sorted(l)
+
+Example 1:
+Input: ABC
+Output:
+ABC ACB BAC BCA CAB CBA
+Explanation:
+Given string ABC has permutations in 6 
+forms as ABC, ACB, BAC, BCA, CAB and CBA .        
