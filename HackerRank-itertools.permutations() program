@@ -1,0 +1,26 @@
+from itertools import permutations
+s,n=input().split()
+p=permutations(s,int(n))
+p=sorted(list(p))
+l=[''.join(list(i)) for i in p]
+for i in l:
+    print(i)
+    
+Sample Input
+HACK 2
+
+Sample Output
+AC
+AH
+AK
+CA
+CH
+CK
+HA
+HC
+HK
+KA
+KC
+KH
+Explanation
+All possible size 2 permutations of the string "HACK" are printed in lexicographic sorted order.    
